@@ -373,7 +373,7 @@ pages["acces"] = banniere(titre = "Accès",
                           texte = """
 Nous sommes situés à 40 km de Toulouse</br>
 et 8 km de Montauban centre</br>
-Nous retrouver avec <a href="https://www.waze.com/fr/live-map/directions?to=ll.43.966835%2C1.341984"><img src="assets/img/acces/waze.png" alt="" width="50" height="50"></a></br>
+Nous retrouver avec <a href="waze://?ll=43.966835,1.341984"><img src="assets/img/acces/waze.png" alt="" width="50" height="50"></a></br>
 <a href="https://umap.openstreetmap.fr/fr/map/acces-la-terrasse_721036">Voir le plan en plein écran</a>""")
 
 pages["acces"] += osmacces
