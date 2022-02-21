@@ -35,6 +35,7 @@ def headerhtml(titre_page):
                         <li class="nav-item"><a class="nav-link" href="cadre.html">Cadre</a></li>
                         <li class="nav-item"><a class="nav-link" href="boissons.html">Boissons</a></li>
 			            <li class="nav-item"><a class="nav-link" href="restauration.html">Restauration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="acces.html">Accès</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 			            <li class="nav-item"><a class="nav-link" href="remerciements.html">Remerciements</a></li>
                     </ul>
@@ -137,7 +138,17 @@ def logo(url_logo):
     return reponse
 
 #######################################################################
-googlemap = """<div class="map-responsive"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10234.235289095723!2d1.3354825258171867!3d43.96174252913296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ac0f7d2c589d6f%3A0x4e2308b2987e614d!2sSkatepark%20Bressols!5e0!3m2!1sfr!2sfr!4v1644418258139!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>"""
+googlemap = """<div class="map-responsive"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10234.235289095723!2d1.3354825258171867!3d43.96174252913296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ac0f7d2c589d6f%3A0x4e2308b2987e614d!2sSkatepark%20Bressols!5e0!3m2!1sfr!2sfr!4v1644418258139!5m2!1sfr!2sfr" width="100pc" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>"""
+openstreetmap = """
+<section class="py-1 bg-dark">
+    <div class="container my-1 bg-dark text-white">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+            <div class="map-responsive">
+            
+<iframe src="https://umap.openstreetmap.fr/fr/map/la-terrasse-82_721008?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false" width="200" height="800" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</div></div></div></div></section>"""
 
 #######################################################################
 def banniere(titre, texte):
@@ -275,7 +286,7 @@ pages["cadre"] = banniere(titre = "Au sein de la Guinguette vous profiterez de :
 <i class="bi bi-play"></i>Molky</br>""")
 
 pages["cadre"] += carousel(nom = "car1",
-                       images = ["assets/img/boissons.jpg","assets/img/ambiance.jpg"])
+                       images = ["assets/img/cadre/petanque.jpg","assets/img/cadre/pingpong.jpg","assets/img/cadre/babyfoot.jpg","assets/img/cadre/petanque2.jpg","assets/img/cadre/flechette.jpg"])
 
 pages["cadre"] += banniere(titre = "A coté de chez nous vous trouverez :",
                           texte = """
@@ -289,7 +300,7 @@ pages["cadre"] += banniere(titre = "A coté de chez nous vous trouverez :",
 <i class="bi bi-play"></i>Sanitaires</br>""")
 
 pages["cadre"] += carousel(nom = "car2",
-                       images = ["assets/img/boissons.jpg","assets/img/ambiance.jpg","assets/img/restauration.jpg","assets/img/emporter.jpg"])
+                       images = ["assets/img/cadre/picnic.jpg", "assets/img/cadre/enfants.jpg", "assets/img/cadre/skate.jpg", "assets/img/cadre/football.jpg", "assets/img/cadre/rugby.jpg", "assets/img/cadre/peche.jpg", "assets/img/cadre/campingcar.jpg"])
 
 
 #######################################################################
@@ -342,6 +353,26 @@ pages["restauration"] += showcase_im_gauche(url_img = "assets/img/ambiance.jpg",
                                           titre = "vanille",
                                           texte = "Selon votre envie..")
 pages["restauration"] += showcase_fin
+
+#######################################################################
+# page acces ##########################################################
+#######################################################################
+pages["acces"] = banniere(titre = "Accès :",
+                          texte = """
+Nous sommes situés à 40 km de Toulouse</br>
+et 8 km de Montauban centre</br>
+Nous retrouver avec <a href="https://www.waze.com/fr/live-map/directions?to=ll.43.966835%2C1.341984"><img src="assets/img/acces/waze.png" alt="" width="50" height="50"></a></br>""")
+
+pages["acces"] += openstreetmap
+
+pages["acces"] += banniere(titre = "Environnement proche :",
+                          texte = """
+<i class="bi bi-play"></i>Espace ombragé avec tables, bancs et barbecue</br>
+<i class="bi bi-play"></i>Sanitaires</br>""")
+
+pages["acces"] += carousel(nom = "car2",
+                       images = ["assets/img/cadre/picnic.jpg", "assets/img/cadre/enfants.jpg", "assets/img/cadre/skate.jpg", "assets/img/cadre/football.jpg", "assets/img/cadre/rugby.jpg", "assets/img/cadre/peche.jpg", "assets/img/cadre/campingcar.jpg"])
+
 #######################################################################
 # MAIN ################################################################
 #######################################################################
