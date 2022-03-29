@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import carte
+
 #######################################################################
 # fonctions ###########################################################
 #######################################################################
@@ -318,52 +320,128 @@ pages["cadre"] += carousel(nom = "car2",
 #######################################################################
 # page boissons #######################################################
 #######################################################################
-pages["boissons"] = titre("Nos Boissons Alcoolisées")
-pages["boissons"] += showcase_debut 
-pages["boissons"] += showcase_im_droite(url_img = "assets/img/ambiance.jpg",
-                                          titre = "Les bières",
-                                          texte = "Produites localement")
-pages["boissons"] += showcase_im_gauche(url_img = "assets/img/ambiance.jpg",
-                                          titre = "Les whiskies",
-                                          texte = "Selon votre envie..")
-pages["boissons"] += showcase_fin
-pages["boissons"] += titre("Nos Boissons Sans Alcool")
-pages["boissons"] += showcase_debut 
-pages["boissons"] += showcase_im_droite(url_img = "assets/img/ambiance.jpg",
-                                          titre = "Les jus",
-                                          texte = "Produites localement")
-pages["boissons"] += showcase_im_gauche(url_img = "assets/img/ambiance.jpg",
-                                          titre = "Les citronades",
-                                          texte = "Selon votre envie..")
+compteur = 0
+#################################################
+pages["boissons"] = titre("Nos Bières Pression")
+pages["boissons"] += showcase_debut
+for produit in carte.bieres_pression:
+    compteur += 1
+    nom_pr = produit["nom"] + " - " + produit["prix"]
+    description_pr = produit["description"] + " - " + produit["qtt"]
+    if compteur % 2 == 1:
+        pages["boissons"] += showcase_im_droite(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+    else:
+        pages["boissons"] += showcase_im_gauche(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
 pages["boissons"] += showcase_fin
 
+#################################################
+pages["boissons"] += titre("Nos Bières Bouteille")
+pages["boissons"] += showcase_debut
+for produit in carte.bieres_bouteille:
+    compteur += 1
+    nom_pr = produit["nom"] + " - " + produit["prix"]
+    description_pr = produit["description"] + " - " + produit["qtt"]
+    if compteur % 2 == 1:
+        pages["boissons"] += showcase_im_droite(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+    else:
+        pages["boissons"] += showcase_im_gauche(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+pages["boissons"] += showcase_fin
+
+#################################################
+pages["boissons"] += titre("Nos Vins")
+pages["boissons"] += showcase_debut
+for produit in carte.vin:
+    compteur += 1
+    nom_pr = produit["nom"] + " - " + produit["prix_verre"] + " le verre de " + produit["qtt_verre"]
+    description_pr = produit["description"] + " - disponible en bouteille de " + produit["qtt_bouteille"] + " à " + produit["prix_bouteille"]
+    if compteur % 2 == 1:
+        pages["boissons"] += showcase_im_droite(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+    else:
+        pages["boissons"] += showcase_im_gauche(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+pages["boissons"] += showcase_fin
+
+#################################################
+pages["boissons"] += titre("Nos Coktails")
+pages["boissons"] += showcase_debut
+for produit in carte.coktail:
+    compteur += 1
+    nom_pr = produit["nom"] + " - " + produit["prix"]
+    description_pr = produit["description"] + " - " + produit["qtt"]
+    if compteur % 2 == 1:
+        pages["boissons"] += showcase_im_droite(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+    else:
+        pages["boissons"] += showcase_im_gauche(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+pages["boissons"] += showcase_fin
+
+#################################################
+pages["boissons"] += titre("Nos Boissons Sans Alcool")
+pages["boissons"] += showcase_debut
+for produit in carte.sans_alcool:
+    compteur += 1
+    nom_pr = produit["nom"] + " - " + produit["prix_verre"] + " le verre de " + produit["qtt_verre"]
+    description_pr = produit["description"] + " - disponible en bouteille de " + produit["qtt_bouteille"] + " à " + produit["prix_bouteille"]
+    if compteur % 2 == 1:
+        pages["boissons"] += showcase_im_droite(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+    else:
+        pages["boissons"] += showcase_im_gauche(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+pages["boissons"] += showcase_fin
 
 #######################################################################
 # page restauration ###################################################
 #######################################################################
+compteur = 0
+#################################################
 pages["restauration"] = titre("Nos Planches")
-pages["restauration"] += showcase_debut 
-pages["restauration"] += showcase_im_droite(url_img = "assets/img/ambiance.jpg",
-                                          titre = "fromage",
-                                          texte = "Produites localement")
-pages["restauration"] += showcase_im_gauche(url_img = "assets/img/ambiance.jpg",
-                                          titre = "charcuterie",
-                                          texte = "Selon votre envie..")
-pages["restauration"] += showcase_im_droite(url_img = "assets/img/ambiance.jpg",
-                                          titre = "toast",
-                                          texte = "Produites localement")
-pages["restauration"] += showcase_im_gauche(url_img = "assets/img/ambiance.jpg",
-                                          titre = "royale",
-                                          texte = "à partager.")
+pages["restauration"] += showcase_debut
+for produit in carte.planches:
+    compteur += 1
+    nom_pr = produit["nom"] + " - " + produit["prix"]
+    description_pr = produit["description"] + " - " + produit["qtt"]
+    if compteur % 2 == 1:
+        pages["restauration"] += showcase_im_droite(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+    else:
+        pages["restauration"] += showcase_im_gauche(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
 pages["restauration"] += showcase_fin
-pages["restauration"] += titre("Nos glaces")
-pages["restauration"] += showcase_debut 
-pages["restauration"] += showcase_im_droite(url_img = "assets/img/ambiance.jpg",
-                                          titre = "chocolat",
-                                          texte = "Produites localement")
-pages["restauration"] += showcase_im_gauche(url_img = "assets/img/ambiance.jpg",
-                                          titre = "vanille",
-                                          texte = "Selon votre envie..")
+
+#################################################
+pages["restauration"] += titre("Nos Glaces")
+pages["restauration"] += showcase_debut
+for produit in carte.glace:
+    compteur += 1
+    nom_pr = produit["nom"] + " - " + produit["prix"]
+    description_pr = produit["description"]
+    if compteur % 2 == 1:
+        pages["restauration"] += showcase_im_droite(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
+    else:
+        pages["restauration"] += showcase_im_gauche(url_img = produit["image"],
+                                          titre = nom_pr,
+                                          texte = description_pr)
 pages["restauration"] += showcase_fin
 
 #######################################################################
