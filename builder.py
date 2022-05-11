@@ -432,7 +432,7 @@ pages["restauration"] += titre("Nos Glaces")
 pages["restauration"] += showcase_debut
 for produit in carte.glace:
     compteur += 1
-    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€"
+    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€" + " - " + str(produit["qtt1"]) + " " + str(produit["contenant1"])
     description_pr = produit["description"]
     if compteur % 2 == 1:
         pages["restauration"] += showcase_im_droite(url_img = produit["image"],
