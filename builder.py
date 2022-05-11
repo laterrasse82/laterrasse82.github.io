@@ -324,10 +324,10 @@ compteur = 0
 #################################################
 pages["boissons"] = titre("Nos Bières Pression")
 pages["boissons"] += showcase_debut
-for produit in carte.bieres_pression:
+for produit in carte.biere_pression:
     compteur += 1
-    nom_pr = produit["nom"] + " - " + produit["prix"]
-    description_pr = produit["description"] + " - " + produit["qtt"]
+    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€ - " + produit["contenant1"] + " de " + produit["qtt1"]
+    description_pr = produit["description"] + " - Disponible en " + produit["contenant2"] + " de " + produit["qtt2"] + " à " + str(produit["prix2"]) + "€"
     if compteur % 2 == 1:
         pages["boissons"] += showcase_im_droite(url_img = produit["image"],
                                           titre = nom_pr,
@@ -341,10 +341,10 @@ pages["boissons"] += showcase_fin
 #################################################
 pages["boissons"] += titre("Nos Bières Bouteille")
 pages["boissons"] += showcase_debut
-for produit in carte.bieres_bouteille:
+for produit in carte.biere_bouteille:
     compteur += 1
-    nom_pr = produit["nom"] + " - " + produit["prix"]
-    description_pr = produit["description"] + " - " + produit["qtt"]
+    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€"
+    description_pr = produit["description"] + " - " + produit["contenant1"] + " de " + produit["qtt1"]
     if compteur % 2 == 1:
         pages["boissons"] += showcase_im_droite(url_img = produit["image"],
                                           titre = nom_pr,
@@ -360,8 +360,8 @@ pages["boissons"] += titre("Nos Vins")
 pages["boissons"] += showcase_debut
 for produit in carte.vin:
     compteur += 1
-    nom_pr = produit["nom"] + " - " + produit["prix_verre"] + " le verre de " + produit["qtt_verre"]
-    description_pr = produit["description"] + " - disponible en bouteille de " + produit["qtt_bouteille"] + " à " + produit["prix_bouteille"]
+    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€ - " + produit["contenant1"] + " de " + produit["qtt1"]
+    description_pr = produit["description"] + " - Disponible en " + produit["contenant2"] + " de " + produit["qtt2"] + " à " + str(produit["prix2"]) + "€"
     if compteur % 2 == 1:
         pages["boissons"] += showcase_im_droite(url_img = produit["image"],
                                           titre = nom_pr,
@@ -377,8 +377,8 @@ pages["boissons"] += titre("Nos Coktails")
 pages["boissons"] += showcase_debut
 for produit in carte.coktail:
     compteur += 1
-    nom_pr = produit["nom"] + " - " + produit["prix"]
-    description_pr = produit["description"] + " - " + produit["qtt"]
+    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€"
+    description_pr = produit["description"] + " - " + produit["contenant1"] + " de " + produit["qtt1"]
     if compteur % 2 == 1:
         pages["boissons"] += showcase_im_droite(url_img = produit["image"],
                                           titre = nom_pr,
@@ -392,10 +392,10 @@ pages["boissons"] += showcase_fin
 #################################################
 pages["boissons"] += titre("Nos Boissons Sans Alcool")
 pages["boissons"] += showcase_debut
-for produit in carte.sans_alcool:
+for produit in carte.soft:
     compteur += 1
-    nom_pr = produit["nom"] + " - " + produit["prix_verre"] + " le verre de " + produit["qtt_verre"]
-    description_pr = produit["description"] + " - disponible en bouteille de " + produit["qtt_bouteille"] + " à " + produit["prix_bouteille"]
+    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€ - " + produit["contenant1"] + " de " + produit["qtt1"]
+    description_pr = produit["description"] + " - Disponible en " + produit["contenant2"] + " de " + produit["qtt2"] + " à " + str(produit["prix2"]) + "€"
     if compteur % 2 == 1:
         pages["boissons"] += showcase_im_droite(url_img = produit["image"],
                                           titre = nom_pr,
@@ -415,8 +415,8 @@ pages["restauration"] = titre("Nos Planches")
 pages["restauration"] += showcase_debut
 for produit in carte.planches:
     compteur += 1
-    nom_pr = produit["nom"] + " - " + produit["prix"]
-    description_pr = produit["description"] + " - " + produit["qtt"]
+    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€"
+    description_pr = produit["description"] + " - " + produit["qtt1"]
     if compteur % 2 == 1:
         pages["restauration"] += showcase_im_droite(url_img = produit["image"],
                                           titre = nom_pr,
@@ -432,7 +432,7 @@ pages["restauration"] += titre("Nos Glaces")
 pages["restauration"] += showcase_debut
 for produit in carte.glace:
     compteur += 1
-    nom_pr = produit["nom"] + " - " + produit["prix"]
+    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€"
     description_pr = produit["description"]
     if compteur % 2 == 1:
         pages["restauration"] += showcase_im_droite(url_img = produit["image"],
