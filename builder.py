@@ -296,7 +296,7 @@ pages["cadre"] = banniere(titre = "Au sein de la Guinguette vous profiterez de :
 <i class="bi bi-play"></i>Terrains de pétanque</br>
 <i class="bi bi-play"></i>Table de ping-pong</br>
 <i class="bi bi-play"></i>Baby-foot</br>
-<i class="bi bi-play"></i>eux de fléchettes</br>
+<i class="bi bi-play"></i>Jeux de fléchettes</br>
 <i class="bi bi-play"></i>Molky</br>""")
 
 pages["cadre"] += carousel(nom = "car1",
