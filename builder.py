@@ -34,7 +34,6 @@ def headerhtml(titre_page):
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="cadre.html">Cadre</a></li>
                         <li class="nav-item"><a class="nav-link" href="boissons.html">Boissons</a></li>
 			            <li class="nav-item"><a class="nav-link" href="restauration.html">Restauration</a></li>
                         <li class="nav-item"><a class="nav-link" href="acces.html">Accès</a></li>
@@ -245,7 +244,7 @@ pages["index"] += showcase_im_gauche(url_img = "assets/img/boissons.jpg",
                                        texte = """<b>Selon votre envie du moment et avec modération, nous vous proposons :</b></br>
 <i class="bi bi-play"></i>Pressions et bières locales</br>
 <i class="bi bi-play"></i>Vin de la région</br>
-<i class="bi bi-play"></i>Des cocktails de fruits frais et rhum</br>
+<i class="bi bi-play"></i>Des planteurs maisons</br>
 <i class="bi bi-play"></i>Des boissons sans alcool : coktails de fruits frais, eau aromatisée, soda...</br>""")
 
 pages["index"] += showcase_im_droite(url_img = "assets/img/restauration.jpg",
@@ -258,10 +257,10 @@ Nous vous proposons :</br></b>
 Les planches sont accompagnées d'un pain spécial.""")
 
 pages["index"] += showcase_im_gauche(url_img = "assets/img/activite.jpg",
-                                       titre = "Les activités",
+                                       titre = "Le cadre",
                                        texte = """Envie de vous dégourdir les jambes, de passer un bon moment ?</br>
 la plaine de jeux de Bressols vous permettra de profiter d'un terrain de pétanque ombragé accolé à la Terrasse.</br>
-Vous trouverez aussi au sein d'un parc ombragé des tables, bancs, 'un skate-park, des terrains de foot et de rugby, d'un parcours de santé…""")
+Vous trouverez aussi au sein d'un parc ombragé des tables, bancs, 'un skate-park, des terrains de foot et de rugby, d'un parcours de santé, d'une aire de jeux pour enfants, de spots de pêche, d'une aire de camping car et de sanitaires.""")
 
 #pages["index"] += showcase_im_droite(url_img = "assets/img/emporter.jpg",
 #                                       titre = "A emporter",
@@ -273,7 +272,7 @@ pages["index"] += showcase_im_droite(url_img = "assets/img/ouverture.jpg",
 La Guinguette sera ouverte jusqu'à la fin des beaux jours :</br>
 Du  Dimanche au mercredi de 9h à minuit</br>
 Du Jeudi au Samedi 9h à 2h</br>
-L'ouverture dépends des conditions météos...</br>
+L'ouverture dépends des conditions météos, suivez les réseaux sociaux pour en savoir plus...</br>
 Des parkings gratuits sont a votre disposition tout autour de la plaine de jeux.""")
 
 pages["index"] += showcase_fin
@@ -284,30 +283,30 @@ pages["index"] += googlemap
 #######################################################################
 # page cadre ##########################################################
 #######################################################################
-pages["cadre"] = banniere(titre = "Au sein de la Guinguette vous profiterez de :",
-                          texte = """
-<i class="bi bi-play"></i>Terrains de pétanque</br>
-<i class="bi bi-play"></i>Table de ping-pong</br>
-<i class="bi bi-play"></i>Baby-foot</br>
-<i class="bi bi-play"></i>Jeux de fléchettes</br>
-<i class="bi bi-play"></i>Molky</br>""")
+# pages["cadre"] = banniere(titre = "Au sein de la Guinguette vous profiterez de :",
+                          # texte = """
+# <i class="bi bi-play"></i>Terrains de pétanque</br>
+# <i class="bi bi-play"></i>Table de ping-pong</br>
+# <i class="bi bi-play"></i>Baby-foot</br>
+# <i class="bi bi-play"></i>Jeux de fléchettes</br>
+# <i class="bi bi-play"></i>Molky</br>""")
 
-pages["cadre"] += carousel(nom = "car1",
-                       images = ["assets/img/cadre/petanque.jpg","assets/img/cadre/pingpong.jpg","assets/img/cadre/babyfoot.jpg","assets/img/cadre/petanque2.jpg","assets/img/cadre/flechette.jpg"])
+# pages["cadre"] += carousel(nom = "car1",
+                       # images = ["assets/img/cadre/petanque.jpg","assets/img/cadre/pingpong.jpg","assets/img/cadre/babyfoot.jpg","assets/img/cadre/petanque2.jpg","assets/img/cadre/flechette.jpg"])
 
-pages["cadre"] += banniere(titre = "A coté de chez nous vous trouverez :",
-                          texte = """
-<i class="bi bi-play"></i>Espace ombragé avec tables, bancs et barbecue</br>
-<i class="bi bi-play"></i>Parcours de santé</br>
-<i class="bi bi-play"></i>Aire de jeux pour enfants</br>
-<i class="bi bi-play"></i>Skatepark</br>
-<i class="bi bi-play"></i>Terrains de foot et de rugby</br>
-<i class="bi bi-play"></i>Spots de pêche</br>
-<i class="bi bi-play"></i>Aire de Camping-car</br>
-<i class="bi bi-play"></i>Sanitaires</br>""")
+# pages["cadre"] += banniere(titre = "A coté de chez nous vous trouverez :",
+                          # texte = """
+# <i class="bi bi-play"></i>Espace ombragé avec tables, bancs et barbecue</br>
+# <i class="bi bi-play"></i>Parcours de santé</br>
+# <i class="bi bi-play"></i>Aire de jeux pour enfants</br>
+# <i class="bi bi-play"></i>Skatepark</br>
+# <i class="bi bi-play"></i>Terrains de foot et de rugby</br>
+# <i class="bi bi-play"></i>Spots de pêche</br>
+# <i class="bi bi-play"></i>Aire de Camping-car</br>
+# <i class="bi bi-play"></i>Sanitaires</br>""")
 
-pages["cadre"] += carousel(nom = "car2",
-                       images = ["assets/img/cadre/picnic.jpg", "assets/img/cadre/enfants.jpg", "assets/img/cadre/skate.jpg", "assets/img/cadre/football.jpg", "assets/img/cadre/rugby.jpg", "assets/img/cadre/peche.jpg", "assets/img/cadre/campingcar.jpg"])
+# pages["cadre"] += carousel(nom = "car2",
+                       # images = ["assets/img/cadre/picnic.jpg", "assets/img/cadre/enfants.jpg", "assets/img/cadre/skate.jpg", "assets/img/cadre/football.jpg", "assets/img/cadre/rugby.jpg", "assets/img/cadre/peche.jpg", "assets/img/cadre/campingcar.jpg"])
 
 
 #######################################################################
@@ -365,22 +364,6 @@ for produit in carte.vin:
                                           texte = description_pr)
 pages["boissons"] += showcase_fin
 
-#################################################
-pages["boissons"] += titre("Nos Coktails")
-pages["boissons"] += showcase_debut
-for produit in carte.coktail:
-    compteur += 1
-    nom_pr = produit["nom"] + " - " + str(produit["prix1"]) + "€"
-    description_pr = produit["description"] + " - " + produit["contenant1"] + " de " + produit["qtt1"]
-    if compteur % 2 == 1:
-        pages["boissons"] += showcase_im_droite(url_img = produit["image"],
-                                          titre = nom_pr,
-                                          texte = description_pr)
-    else:
-        pages["boissons"] += showcase_im_gauche(url_img = produit["image"],
-                                          titre = nom_pr,
-                                          texte = description_pr)
-pages["boissons"] += showcase_fin
 
 #################################################
 pages["boissons"] += titre("Nos Boissons Sans Alcool")
