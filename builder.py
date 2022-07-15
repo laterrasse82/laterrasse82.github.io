@@ -57,9 +57,6 @@ footerhtml = """        <!-- Footer-->
                             <li class="list-inline-item me-4">
                                 <a href="#!"><i class="bi-facebook fs-1" style="color: #b7975a;"></i></a>
                             </li>
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-1" style="color: #b7975a;"></i></a>
-                            </li>
                             <li class="list-inline-item">
                                 <a href="#!"><i class="bi-instagram fs-1" style="color: #b7975a;"></i></a>
                             </li>
@@ -248,9 +245,8 @@ pages["index"] += showcase_im_gauche(url_img = "assets/img/boissons.jpg",
                                        texte = """<b>Selon votre envie du moment et avec modération, nous vous proposons :</b></br>
 <i class="bi bi-play"></i>Pressions et bières locales</br>
 <i class="bi bi-play"></i>Vin de la région</br>
-<i class="bi bi-play"></i>Des cocktails</br>
-<i class="bi bi-play"></i>Les classiques spiritueux : Rhum, Whisky, Tequila etc...</br>
-<i class="bi bi-play"></i>Des boissons sans alcool : jus de fruits, cocktails etc...</br>""")
+<i class="bi bi-play"></i>Des cocktails de fruits frais et rhum</br>
+<i class="bi bi-play"></i>Des boissons sans alcool : coktails de fruits frais, eau aromatisée, soda...</br>""")
 
 pages["index"] += showcase_im_droite(url_img = "assets/img/restauration.jpg",
                                        titre = "La restauration",
@@ -258,30 +254,27 @@ pages["index"] += showcase_im_droite(url_img = "assets/img/restauration.jpg",
 Nous vous proposons :</br></b>
 <i class="bi bi-play"></i>Planche de charcuterie.</br>
 <i class="bi bi-play"></i>Planche de fromage.</br>
-<i class="bi bi-play"></i>Planche de toast.</br>
-<i class="bi bi-play"></i>Planche de fruit.</br>
-<i class="bi bi-play"></i>Maxi planche.</br>
-Les planches sont accompagnées de bâtonnets de crudités de saison et de sauce maison.""")
+<i class="bi bi-play"></i>Planche vegetarienne.</br>
+Les planches sont accompagnées d'un pain spécial.""")
 
 pages["index"] += showcase_im_gauche(url_img = "assets/img/activite.jpg",
                                        titre = "Les activités",
-                                       texte = """Envie de vous dégourdir les jambes, de défier vos proches, de passer un bon moment ?</br>
-Nous mettons à votre disposition des terrains de pétanque, baby-foot, fléchettes, molky, ping-pong...</br>
-Vous pourrez aussi profiter, aux abords de la guinguette de tables et bancs au sein d'un parc ombragé, d'un skate-park, de terrains de foot et de rugby, d'un parcours de santé…""")
+                                       texte = """Envie de vous dégourdir les jambes, de passer un bon moment ?</br>
+la plaine de jeux de Bressols vous permettra de profiter d'un terrain de pétanque ombragé accolé à la Terrasse.</br>
+Vous trouverez aussi au sein d'un parc ombragé des tables, bancs, 'un skate-park, des terrains de foot et de rugby, d'un parcours de santé…""")
 
-pages["index"] += showcase_im_droite(url_img = "assets/img/emporter.jpg",
-                                       titre = "A emporter",
-                                       texte = """Vous pouvez profiter de nos produits à emporter dans une box pique nique, à consommer ou vous le souhaitez""")
+#pages["index"] += showcase_im_droite(url_img = "assets/img/emporter.jpg",
+#                                       titre = "A emporter",
+#                                       texte = """Vous pouvez profiter de nos produits à emporter dans une box pique nique, à consommer ou vous le souhaitez""")
 
-pages["index"] += showcase_im_gauche(url_img = "assets/img/ouverture.jpg",
+pages["index"] += showcase_im_droite(url_img = "assets/img/ouverture.jpg",
                                        titre = "Ouverture",
                                        texte = """
-La Guinguette sera ouverte :</br>
-Du 1er Juin au 30 Septembre</br>
-Du Mercredi au Dimanche</br>
-De 16h00 à 02h00</br>
-L'ouverture dépends des conditions météos, en savoir plus...</br>
-Un parking gratuit est a disposition.""")
+La Guinguette sera ouverte jusqu'à la fin des beaux jours :</br>
+Du  Dimanche au mercredi de 9h à minuit</br>
+Du Jeudi au Samedi 9h à 2h</br>
+L'ouverture dépends des conditions météos...</br>
+Des parkings gratuits sont a votre disposition tout autour de la plaine de jeux.""")
 
 pages["index"] += showcase_fin
 
